@@ -8,18 +8,18 @@ final class Routes: RouteCollection {
 
     func build(_ builder: RouteBuilder) throws {
         /// GET /
-        builder.get { req in
-            return try self.view.make("aboutme")
-        }
+//        builder.get { req in
+//            return try self.view.make("aboutme")
+//        }
 
         /// GET /hello/...
-//        builder.resource("hello", HelloController(view))
-//
-//        // response to requests to /info domain
-//        // with a description of the request
-//        builder.get("info") { req in
-//            return req.description
-//        }
+        builder.resource("hello", HelloController(view))
+
+        // response to requests to /info domain
+        // with a description of the request
+        builder.get("info") { req in
+            return req.description
+        }
 
     }
 }
