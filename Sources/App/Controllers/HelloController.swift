@@ -15,8 +15,8 @@ final class HelloController: ResourceRepresentable {
             "name": "World"
         ], for: req)
     }
-
-    /// GET /hello/:string
+//
+//    /// GET /hello/:string
     func show(_ req: Request, _ string: String) throws -> ResponseRepresentable {
         return try view.make("hello", [
             "name": string
