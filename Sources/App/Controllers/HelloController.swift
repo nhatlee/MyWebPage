@@ -8,7 +8,7 @@ final class HelloController: ResourceRepresentable {
     init(_ view: ViewRenderer) {
         self.view = view
     }
-
+    
     /// GET /hello
     func index(_ req: Request) throws -> ResponseRepresentable {
         return try view.make("hello", [
